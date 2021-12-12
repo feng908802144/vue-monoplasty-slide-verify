@@ -1,4 +1,31 @@
-# vue-monoplasty-slide-verify
+# vue-monoplasty-slide-verify  
+
+基于 Vue2.0+ 的验证码插件。可用于网页注册等需要验证码的地方，滑动式的验证码免于字母验证码的繁琐输入。在线演示，示例代码：
+
+import Vue from 'vue';
+import SlideVerify from 'vue-monoplasty-slide-verify';
+
+Vue.use(SlideVerify);
+
+export default {
+      name: 'App',
+      data(){
+          return {
+              msg: '',
+          }
+      },
+      methods: {
+          onSuccess(){
+              this.msg = 'login success'
+          },
+          onFail(){
+              this.msg = ''
+          },
+          onRefresh(){
+              this.msg = ''
+          }
+      }
+  }
 
 > A Vue plugin to slide verify [Demo](https://monoplasty.github.io/vue-monoplasty-slide-verify/)
 
